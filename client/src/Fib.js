@@ -51,6 +51,7 @@ class Fib extends Component {
         </div>
       )
     }
+    return entries
   }
 
   render() {
@@ -66,6 +67,7 @@ class Fib extends Component {
         </form>
         <h3> Index I have seen: </h3>
         {this.renderSeenIndexes}
+
         <h3> Calculated values: </h3>
         {this.renderValues}
       </div>
