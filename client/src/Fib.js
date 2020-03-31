@@ -6,7 +6,7 @@ class Fib extends Component {
     seenIndexes: [],
     values: {},
     index: ''
-  }
+  };
 
   componentDidMount() {
     this.fetchValues()
@@ -32,7 +32,7 @@ class Fib extends Component {
       index: this.state.index
     });
     this.setState({ index: '' })
-  }
+  };
 
   renderSeenIndexes() {
     return this.state.seenIndexes.map(({ number }) => number).join(', ')
@@ -46,10 +46,10 @@ class Fib extends Component {
         <div key={key}>
           For index {key} I calculated {this.state.values[key]}
         </div>
-      )
+      );
     }
 
-    return entries;
+    return entries
   }
 
   render() {
