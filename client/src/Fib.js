@@ -66,10 +66,10 @@ class Fib extends Component {
           <button> submit </button>
         </form>
         <h3> Index I have seen: </h3>
-        {this.renderSeenIndexes}
+        {this.renderSeenIndexes()}
 
         <h3> Calculated values: </h3>
-        {this.renderValues}
+        {this.renderValues()}
       </div>
     )
   }
