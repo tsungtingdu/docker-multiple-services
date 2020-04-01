@@ -19,3 +19,16 @@ after_sucess:
   - docker push tsungtingdu/multi-server 
   - docker push tsungtingdu/multi-worker
   - docker push tsungtingdu/multi-nginx 
+
+deploy:
+  edge: true
+  provider: elasticbeanstalk
+  region: "us-east-2"  
+  app: "multiple-services" 
+  env: "MultipleServices-env"
+  bucket_name: "elasticbeanstalk-us-east-2-516245968608"
+  bucket_path: "docker-multiple-services"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
